@@ -3,15 +3,20 @@
 
 
 <body>
+
 <h1>{{ title }}</h1>
 
+<a href="/landmarks/">All Landmarks</a>
+&nbsp;
+<a href="/landmarks/create/">create a new landmark</a>
 
-{{ instance.title }}<br/>
-{{ instance.description }}<br/>
-{{ instance.created_at }}<br/>
-{{ instance.updated_at }}<br/>
-{{ instance.id }}<br/>
-
+<br/> </br>
+id: {{ instance.id }}<br/>
+title: {{ instance.title }}<br/>
+description: {{ instance.description }}<br/>
+country: {{ instance.country.name }}<br/>
+created_at: {{ instance.created_at }}<br/>
+updated_at: {{ instance.updated_at }}<br/>
 
 </body>
 

@@ -9,16 +9,18 @@
 
 {% for obj in object_list %}
 {% url "landmarks:details" id=obj.id %}
-<a href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a><br/>
-{{ obj.description }}<br/>
-{{ obj.created_at }}<br/>
-{{ obj.updated_at }}<br/>
-{{ obj.country }}<br/>
-{{ obj.id }}<br/>
+<a href='/landmarks/{{ obj.id }}'>
+id: {{ obj.id }}<br/>
+title: {{ obj.title }}</a><br/>
+description: {{ obj.description }}<br/>
+country: {{ obj.country.name }}<br/>
+created_at: {{ obj.created_at }}<br/>
+updated_at: {{ obj.updated_at }}<br/>
+
+<br/><br/>
 
 {% endfor %}
 
-<br/><br/>
 </body>
 
 </html>
