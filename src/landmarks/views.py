@@ -10,6 +10,7 @@ def landmark_create(request):
 		instance = form.save(commit=False)
 		print form.cleaned_data.get("title")
 		instance.save()
+		return HttpResponseRedirect("/landmarks")
 	context = {
 		"form": form,
 	}
