@@ -1,13 +1,13 @@
 <!--DOCTYPE html -->
 <html>
 
-<body>
+<body style="text-align: center;">
 <h1>Create New landmark Form</h1>
 
 <form method='POST' action=''>{% csrf_token %}
 {{ form.as_p }}
  
-<input type='submit' value='Create Landmark' />
+<input type='submit' href="/landmarks/" value='Create Landmark' />
 
 </form>
 

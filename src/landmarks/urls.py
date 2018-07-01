@@ -8,7 +8,7 @@ from .views import (
 	)
 
 urlpatterns = [
-	url(r'^$', landmark_list),
+	url(r'^$', landmark_list, name='landmark_list'),
     url(r'^create/$', landmark_create),
     url(r'^(?P<id>\d+)/$', landmark_details, name='details'),
     #url(r'^posts/$', "<appname>.views.<function_name>"),

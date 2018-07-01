@@ -13,10 +13,10 @@ def landmark_create(request):
 	context = {
 		"form": form,
 	}
-    # return HttpResponseRedirect('/landmarks/')
-    # return redirect('landmark_list')
-    # return HttpResponseRedirect(reverse('landmark_list'))
 	return render(request, "landmark_form.html", context)
+    # return redirect("landmark_list")
+    # return HttpResponseRedirect("/landmarks")
+    # return HttpResponseRedirect(reverse('landmark_list'))
 
 def landmark_details(request, id=None): #retrieve
 	#instance = Post.objects.get(id=1)
