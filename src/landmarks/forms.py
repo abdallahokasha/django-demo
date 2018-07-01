@@ -11,4 +11,6 @@ class LandmarkForm(forms.ModelForm):
             "title",
             "description",
             "country",
+            "latitude",
+            "longitude",
         ]

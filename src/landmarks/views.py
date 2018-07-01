@@ -1,5 +1,5 @@
-from django.http import HttpResponse
-from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404, redirect
 
 from .forms import LandmarkForm
 from .models import Landmark
@@ -13,6 +13,9 @@ def landmark_create(request):
 	context = {
 		"form": form,
 	}
+    # return HttpResponseRedirect('/landmarks/')
+    # return redirect('landmark_list')
+    # return HttpResponseRedirect(reverse('landmark_list'))
 	return render(request, "landmark_form.html", context)
 
 def landmark_details(request, id=None): #retrieve

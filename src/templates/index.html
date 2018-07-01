@@ -16,10 +16,25 @@ description: {{ obj.description }}<br/>
 country: {{ obj.country.name }}<br/>
 created_at: {{ obj.created_at }}<br/>
 updated_at: {{ obj.updated_at }}<br/>
-
+latitude: {{ obj.latitude }} <br/>
+longitude: {{obj.longitude}} <br/>
 <br/><br/>
-
+<script>
+        function myMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng("{{obj.latitude}}", "{{obj.longitude}}"),
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.HYBRID
+            }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+</script>
+        
+        <script src="http://maps.google.com/maps/api/js?sensor=false&callback=myMap">
+</script>
+        
 {% endfor %}
+
 
 </body>
 
